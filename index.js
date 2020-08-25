@@ -35,13 +35,14 @@ if (argv.yaml || argv.y) {
 } else if (argv.html || argv.h) {
   mode = 'html';
 }
-
+console.log('mode', mode);
 switch (mode) {
   case 'yaml': {
     fs.writeFileSync(path.join(srcDir, outputDir, TARGET_YAML_FILE), parseProject(srcDir));
     break;
   }
   case 'json': {
+    console.log('json', srcDir);
     generateJson(parseProject(srcDir), path.join(srcDir, outputDir, TARGET_JSON_FILE));
     break;
   }

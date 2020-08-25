@@ -20,3 +20,7 @@ ColorExtended < Color {
     channels: {red: i, green: i, blue: i}, # Nested object
     primaryChannel: (red|green|blue) # Enum-field
 }
+
+# Enum definition
+
+Colors (purple|white|black)
